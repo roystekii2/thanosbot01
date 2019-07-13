@@ -10,4 +10,4 @@ async def on_message(message):
             message.delete()
 
 
-client.run("NTk3Nzc5NTkzODkzNjQyMjQw.XSNDtA.ty_tS837tt6sLM3aqXVr85QmUyA")
+client.run(os.environ['TOKEN'])

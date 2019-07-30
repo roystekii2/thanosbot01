@@ -8,9 +8,7 @@ from discord.ext import commands
 # you need this line, and you forgot it
 logging.basicConfig(level='INFO')
 
-
 client = commands.Bot(command_prefix="=")
-
 
 # do NOT use @client.event here, it breaks everything
 @client.listen() 
@@ -22,5 +20,4 @@ async def on_message(message):
     elif message.channel == general and message.attachments:
         await message.delete()
 
-
-client.run(os.environ['NTk3Nzc5NTkzODkzNjQyMjQw.XSoU6A.8iFCVeEx7ZNB9WQTIZyBxkXhhk4'])
+client.run(os.environ['TOKEN'])

@@ -55,7 +55,7 @@ async def leavetheteam(ctx):
     await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
     embed = discord.Embed(title = "Farewell {0} to the family... You are on your own now...".format(ctx.message.author.name))
     embed.set_image(url ="https://i1.wp.com/78.media.tumblr.com/b4171532756933ce3014e9ddffe0fbce/tumblr_pcp1aiorRo1sc0ffqo5_540.gif?w=605&ssl=1 ")
-    await ctx.send("You have failed me... {ctx.message.author.mention} left the family...", embed = embed)
+    await ctx.send(f"You have failed me... {ctx.message.author.mention} left the family...", embed = embed)
     await ctx.message.delete()
 
 

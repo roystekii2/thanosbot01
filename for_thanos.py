@@ -26,7 +26,7 @@ async def on_message(message):
 @commands.has_role("Admin")
 async def mute(ctx, user: discord.Member):
 	client.add_roles(user, get(ctx.guild, "Muted")) # change "Muted"
-  await ctx.send('{0} has been muted!'.format(user))
+        await ctx.send('{0} has been muted!'.format(user))
   # I think this should work but honestly I have no idea
 	
   

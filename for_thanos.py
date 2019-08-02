@@ -23,10 +23,10 @@ async def on_message(message):
 
 #ngl I've never used a command system like this before so I'm kind of going improv
 
-@client.command(pass_context=True) # this makes sure the ctx var is there 
+@client.command() # this makes sure the ctx var is there 
 @commands.has_role("Admin")
 async def mute(ctx, user: discord.Member):
- client.add_roles(user, get(ctx.guild, "Muted")) # change "Muted"
+ await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Muted"))
  await ctx.send('{0} has been muted!'.format(user))
   # I think this should work but honestly I have no idea
 	

@@ -2,6 +2,7 @@
 # -- coding: utf-8 --
 import logging
 import os
+import requests
 import discord
 from discord.ext import commands
 from discord.utils import get

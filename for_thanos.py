@@ -125,7 +125,7 @@ async def thanosquotes(ctx):
     embed.set_image(url ="https://data.whicdn.com/images/326805782/original.gif ")
     messages = ["The end is near...", "You’re strong. But I could snap my fingers, and you’d all cease to exist.", "Fun isn’t something one considers when balancing the universe. But this… does put a smile on my face.","Stark… you have my respect. I hope the people of Earth will remember you.","I know what it's like to lose. To feel so desperately that you're right, yet to fail nonetheless. It's frightening, turns the legs to jelly. I ask you to what end? Dread it. Run from it. Destiny arrives all the same. And now it's here. Or should I say, I am."]
     message=random.choice(messages).format(member.mention)
-    await ctx.send(message, file = b)
+    await ctx.send(message, embed=embed)
     await ctx.message.delete()
 	
 client.run(os.environ['TOKEN'])

@@ -89,6 +89,15 @@ async def sleep(ctx):
     embed.set_image(url ="https://media.tenor.com/images/bed6d973f9d9b51b2e555e383eab3cb9/tenor.gif ")
     await ctx.send(f"You r now invisible {ctx.message.author.mention} ", embed = embed)
     await ctx.message.delete()
+	
+@client.command()
+async def wakeup(ctx):
+    user = ctx.message.author 
+    await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Do not disturb"))
+    embed = discord.Embed(title = "{0} Welcome back!".format(ctx.message.author.name))
+    embed.set_image(url ="https://media2.giphy.com/media/ZlL9U0DNaOdFK/giphy.gif ")
+    await ctx.send(f"You just woke up! {ctx.message.author.mention} ", embed = embed)
+    await ctx.message.delete()
 
 	
 client.run(os.environ['TOKEN'])

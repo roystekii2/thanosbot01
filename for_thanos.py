@@ -34,8 +34,19 @@ async def mute(ctx, user: discord.Member):
 @commands.has_any_role("Admin", "Mod", "Chat Mod")
 async def unmute(ctx, user: discord.Member):
  await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Muted"))
- await ctx.send('{0} is now unmuted!'.format(user))
+ await ctx.send('{0} has been  unmuted!'.format(user))
  await ctx.message.delete()
+
+
+@client.command()
+async def jointheforce(ctx):
+  await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
+    with open("Image.webp", "wb") as f:
+        f.write(requests.get("https://static.comicvine.com/uploads/original/11113/111131285/6475508-9502292318-64162.gif
+").content)
+    fi = discord.File("Image.webp")
+    await ctx.send("You are now my child...", file = fi)
+    await ctx.message.delete()
 
 
 client.run(os.environ['TOKEN'])

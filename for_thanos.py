@@ -81,6 +81,15 @@ async def thanosdance(ctx):
     await ctx.send(f"Prefer mad Thanos or happy Thanos? ", embed = embed)
     await ctx.message.delete()
 	
+@client.command()
+async def sleep(ctx):
+    user = ctx.message.author 
+    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Do not disturb"))
+    embed = discord.Embed(title = "{0} Its sleeping time!".format(ctx.message.author.name))
+    embed.set_image(url ="https://media.tenor.com/images/bed6d973f9d9b51b2e555e383eab3cb9/tenor.gif ")
+    await ctx.send(f"You r now invisible {ctx.message.author.mention} ", embed = embed)
+    await ctx.message.delete()
 
+	
 client.run(os.environ['TOKEN'])
 

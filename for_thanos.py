@@ -99,6 +99,23 @@ async def wakeup(ctx):
     await ctx.send(f"You just woke up! {ctx.message.author.mention} ", embed = embed)
     await ctx.message.delete()
 
+@client.command()
+async def enterquantum(ctx):
+    user = ctx.message.author 
+    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Hot(NSFW)"))
+    embed = discord.Embed(title = "{0} Prepare yourself~~".format(ctx.message.author.name))
+    embed.set_image(url ="https://imgix.bustle.com/uploads/image/2018/5/29/557a49a9-ccd7-4a93-8200-29af5c327b8d-tumblr_p7jzjhkadj1wonjtqo4_r1_540.gif ")
+    await ctx.send(f"You are now entering the quantum realm... {ctx.message.author.mention} ", embed = embed)
+    await ctx.message.delete()
+	
+@client.command()
+async def exitquantum(ctx):
+    user = ctx.message.author 
+    await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Hot(NSFW)"))
+    embed = discord.Embed(title = "{0} Goodbye~~ come back soon!".format(ctx.message.author.name))
+    embed.set_image(url ="https://i.kinja-img.com/gawker-media/image/upload/s--MPWE1GzG--/c_scale,fl_progressive,q_80,w_800/xfyrealmcjruk6o3vqpu.gif ")
+    await ctx.send(f"You are now leaving the quantum realm... {ctx.message.author.mention} ", embed = embed)
+    await ctx.message.delete()
 	
 client.run(os.environ['TOKEN'])
 

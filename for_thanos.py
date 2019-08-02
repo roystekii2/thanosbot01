@@ -34,7 +34,7 @@ async def mute(ctx, user: discord.Member):
 @commands.has_any_role("Admin", "Mod", "Chat Mod")
 async def mute(ctx, user: discord.Member):
  await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Muted"))
- await ctx.send('{0} has been unmuted!'.format(user))
+ await ctx.send('{0} is now unmuted!'.format(user))
  await ctx.message.delete()
 
 

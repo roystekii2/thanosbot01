@@ -50,7 +50,7 @@ async def jointheforce(ctx):
 	
 	
 @client.command()
-async def leavetheteam(ctx):
+async def leavetheforce(ctx):
     user = ctx.message.author 
     await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
     embed = discord.Embed(title = "Farewell {0} to the family... You are on your own now...".format(ctx.message.author.name))

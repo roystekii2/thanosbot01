@@ -43,7 +43,7 @@ async def unmute(ctx, user: discord.Member):
 async def jointheforce(ctx):
   await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
   if 5 == 5:
-  with open("Image.webp", "wb") as f:
+   with open("Image.webp", "wb") as f:
         f.write(requests.get("https://static.comicvine.com/uploads/original/11113/111131285/6475508-9502292318-64162.gif ").content)
   await ctx.send("You are now my child...", file = fi)
   await ctx.message.delete()

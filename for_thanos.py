@@ -58,6 +58,14 @@ async def leavetheforce(ctx):
     await ctx.send(f"You have failed me... {ctx.message.author.mention} left the family...", embed = embed)
     await ctx.message.delete()
 
+	
+@client.command()
+async def snap(ctx):
+    user = ctx.message.author 
+    embed = discord.Embed(title = "OH SNAP!".format(ctx.message.author.name))
+    embed.set_image(url ="https://media1.tenor.com/images/e36fb32cfc3b63075adf0f1843fdc43a/tenor.gif?itemid=12502580 ")
+    await ctx.send(f"I can do it with a snap of fingers, and you all cease to exist ", embed = embed)
+    await ctx.message.delete()
 
 client.run(os.environ['TOKEN'])
 

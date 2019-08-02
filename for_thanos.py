@@ -67,5 +67,12 @@ async def snap(ctx):
     await ctx.send(f"I can do it with a snap of fingers, and you all cease to exist ", embed = embed)
     await ctx.message.delete()
 
+@client.command()
+async def thanoschildren(ctx):
+    await ctx.send(f"current server members:{ctx.guild.member_count}")
+    await ctx.message.delete()
+
+	
+
 client.run(os.environ['TOKEN'])
 

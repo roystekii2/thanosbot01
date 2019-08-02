@@ -72,6 +72,14 @@ async def thanoschildren(ctx):
     await ctx.send(f"current server members: {ctx.guild.member_count}")
     await ctx.message.delete()
 
+
+@client.command()
+async def thanosdance(ctx):
+    user = ctx.message.author 
+    embed = discord.Embed(title = "DANCE DANCE BABY!!".format(ctx.message.author.name))
+    embed.set_image(url ="https://external-preview.redd.it/O344OQ3Tdkfy80TzwR0vUZcqRJYpI8JamgDgr-mOC74.gif?width=600&height=314.136125654&s=cfb769c9aa5197e112434eedebc5eec3df53fcd0 ")
+    await ctx.send(f"Prefer mad Thanos or happy Thanos? ", embed = embed)
+    await ctx.message.delete()
 	
 
 client.run(os.environ['TOKEN'])

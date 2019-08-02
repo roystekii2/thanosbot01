@@ -69,7 +69,7 @@ async def snap(ctx):
 
 @client.command()
 async def thanoschildren(ctx):
-    await ctx.send(f"current server members:{ctx.guild.member_count}")
+    await ctx.send(f"current server members: {ctx.guild.member_count}")
     await ctx.message.delete()
 
 	

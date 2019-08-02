@@ -24,7 +24,7 @@ async def on_message(message):
 
 @client.command(pass_context=True) # this makes sure the ctx var is there 
 @commands.has_role("Admin")
-asnyc def mute(ctx, user: discord.Member):
+async def mute(ctx, user: discord.Member):
 	client.add_roles(user, get(ctx.guild, "Muted")) # change "Muted"
   await ctx.send('{0} has been muted!'.format(user))
   # I think this should work but honestly I have no idea

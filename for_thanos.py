@@ -176,4 +176,4 @@ async def thanosquotes(ctx):
     await ctx.message.delete()
 	
 #client.run(os.environ['TOKEN'])
-client.run("NTk3Nzc5NTkzODkzNjQyMjQw.XUV_bA.5zbfb7y45h7nwOUt9tVvE-9pQmU")
+client.run("NTk3Nzc5NTkzODkzNjQyMjQw.XUV_bA.5zbfb7y45h7nwOUt9tVvE-9pQmU ")

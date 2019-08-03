@@ -12,7 +12,13 @@ from discord.utils import get
 logging.basicConfig(level='INFO')
 
 client = commands.Bot(command_prefix="=", case_insensitive=True)
-
+def C(ch:int):
+    if ch == 586147813730025503 or ch == 605335008525156352 or ch == 587631308344262659 or ch == 592258548533166100:
+        return 1 
+    else:
+        return 2
+global c 
+c = C
 # do NOT use @client.event here, it breaks everything
 @client.listen() 
 async def on_message(message):
@@ -42,91 +48,132 @@ async def unmute(ctx, user: discord.Member):
 
 @client.command()
 async def jointheforce(ctx):
-    user = ctx.message.author 
-    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
-    embed = discord.Embed(title = "welcome {0} to the family!".format(ctx.message.author.name))
-    embed.set_image(url ="https://static.comicvine.com/uploads/original/11113/111131285/6475508-9502292318-64162.gif ")
-    await ctx.send("You are now my child...", embed = embed)
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
+        embed = discord.Embed(title = "welcome {0} to the family!".format(ctx.message.author.name))
+        embed.set_image(url ="https://static.comicvine.com/uploads/original/11113/111131285/6475508-9502292318-64162.gif ")
+        await ctx.send("You are now my child...", embed = embed)
     await ctx.message.delete()
 	
 	
 @client.command()
 async def leavetheforce(ctx):
-    user = ctx.message.author 
-    await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
-    embed = discord.Embed(title = "Farewell {0} to the family... You are on your own now...".format(ctx.message.author.name))
-    embed.set_image(url ="https://i1.wp.com/78.media.tumblr.com/b4171532756933ce3014e9ddffe0fbce/tumblr_pcp1aiorRo1sc0ffqo5_540.gif?w=605&ssl=1 ")
-    await ctx.send(f"You have failed me... {ctx.message.author.mention} left the family...", embed = embed)
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Thanos' Children"))
+        embed = discord.Embed(title = "Farewell {0} to the family... You are on your own now...".format(ctx.message.author.name))
+        embed.set_image(url ="https://i1.wp.com/78.media.tumblr.com/b4171532756933ce3014e9ddffe0fbce/tumblr_pcp1aiorRo1sc0ffqo5_540.gif?w=605&ssl=1 ")
+        await ctx.send(f"You have failed me... {ctx.message.author.mention} left the family...", embed = embed)
     await ctx.message.delete()
 
 	
 @client.command()
 async def snap(ctx):
-    user = ctx.message.author 
-    embed = discord.Embed(title = "OH SNAP!".format(ctx.message.author.name))
-    embed.set_image(url ="https://media1.tenor.com/images/e36fb32cfc3b63075adf0f1843fdc43a/tenor.gif?itemid=12502580 ")
-    await ctx.send(f"I can do it with a snap of fingers, and you all cease to exist ", embed = embed)
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        embed = discord.Embed(title = "OH SNAP!".format(ctx.message.author.name))
+        embed.set_image(url ="https://media1.tenor.com/images/e36fb32cfc3b63075adf0f1843fdc43a/tenor.gif?itemid=12502580 ")
+        await ctx.send(f"I can do it with a snap of fingers, and you all cease to exist ", embed = embed)
     await ctx.message.delete()
 
 @client.command()
 async def thanoschildren(ctx):
-    await ctx.send(f"current server members: {ctx.guild.member_count}")
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        await ctx.send(f"current server members: {ctx.guild.member_count}")
     await ctx.message.delete()
 
 
 @client.command()
 async def thanosdance(ctx):
-    user = ctx.message.author 
-    embed = discord.Embed(title = "DANCE DANCE BABY!!".format(ctx.message.author.name))
-    embed.set_image(url ="https://external-preview.redd.it/O344OQ3Tdkfy80TzwR0vUZcqRJYpI8JamgDgr-mOC74.gif?width=600&height=314.136125654&s=cfb769c9aa5197e112434eedebc5eec3df53fcd0 ")
-    await ctx.send(f"Prefer mad Thanos or happy Thanos? ", embed = embed)
-    await ctx.message.delete()
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        embed = discord.Embed(title = "DANCE DANCE BABY!!".format(ctx.message.author.name))
+        embed.set_image(url ="https://external-preview.redd.it/O344OQ3Tdkfy80TzwR0vUZcqRJYpI8JamgDgr-mOC74.gif?width=600&height=314.136125654&s=cfb769c9aa5197e112434eedebc5eec3df53fcd0 ")
+        await ctx.send(f"Prefer mad Thanos or happy Thanos? ", embed = embed)
+        await ctx.message.delete()
 	
 @client.command()
 async def sleep(ctx):
-    user = ctx.message.author 
-    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Do not disturb"))
-    embed = discord.Embed(title = "{0} Its sleeping time!".format(ctx.message.author.name))
-    embed.set_image(url ="https://media.tenor.com/images/bed6d973f9d9b51b2e555e383eab3cb9/tenor.gif ")
-    await ctx.send(f"You r now invisible {ctx.message.author.mention} ", embed = embed)
-    await ctx.message.delete()
+    global c 
+    if c(ctx.channel.id) == 3: #modified so it wont work anyway
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Do not disturb"))
+        embed = discord.Embed(title = "{0} Its sleeping time!".format(ctx.message.author.name))
+        embed.set_image(url ="https://media.tenor.com/images/bed6d973f9d9b51b2e555e383eab3cb9/tenor.gif ")
+        await ctx.send(f"You r now invisible {ctx.message.author.mention} ", embed = embed)
+        await ctx.message.delete()
 	
 @client.command()
 async def wakeup(ctx):
-    user = ctx.message.author 
-    await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Do not disturb"))
-    embed = discord.Embed(title = "{0} Welcome back!".format(ctx.message.author.name))
-    embed.set_image(url ="https://media2.giphy.com/media/ZlL9U0DNaOdFK/giphy.gif ")
-    await ctx.send(f"You just woke up! {ctx.message.author.mention} ", embed = embed)
+    global c 
+    if c(ctx.channel.id) == 3: #modified so it wont work anyway dont touch
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Do not disturb"))
+        embed = discord.Embed(title = "{0} Welcome back!".format(ctx.message.author.name))
+        embed.set_image(url ="https://media2.giphy.com/media/ZlL9U0DNaOdFK/giphy.gif ")
+        await ctx.send(f"You just woke up! {ctx.message.author.mention} ", embed = embed)
     await ctx.message.delete()
 
 @client.command()
 async def enterquantum(ctx):
-    user = ctx.message.author 
-    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Hot(NSFW)"))
-    embed = discord.Embed(title = "{0} Prepare yourself~~".format(ctx.message.author.name))
-    embed.set_image(url ="https://imgix.bustle.com/uploads/image/2018/5/29/557a49a9-ccd7-4a93-8200-29af5c327b8d-tumblr_p7jzjhkadj1wonjtqo4_r1_540.gif ")
-    await ctx.send(f"You are now entering the quantum realm... {ctx.message.author.mention} ", embed = embed)
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Hot(NSFW)"))
+        embed = discord.Embed(title = "{0}, Prepare yourself~~".format(ctx.message.author.name))
+        embed.set_image(url ="https://imgix.bustle.com/uploads/image/2018/5/29/557a49a9-ccd7-4a93-8200-29af5c327b8d-tumblr_p7jzjhkadj1wonjtqo4_r1_540.gif ")
+        await ctx.send(f"You are now entering the quantum realm... {ctx.message.author.mention} ", embed = embed)
     await ctx.message.delete()
 	
 @client.command()
 async def exitquantum(ctx):
-    user = ctx.message.author 
-    await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Hot(NSFW)"))
-    embed = discord.Embed(title = "{0} Goodbye~~ come back soon!".format(ctx.message.author.name))
-    embed.set_image(url ="https://i.kinja-img.com/gawker-media/image/upload/s--MPWE1GzG--/c_scale,fl_progressive,q_80,w_800/xfyrealmcjruk6o3vqpu.gif ")
-    await ctx.send(f"You are now leaving the quantum realm... {ctx.message.author.mention} ", embed = embed)
+    global c 
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        user = ctx.message.author 
+        await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Hot(NSFW)"))
+        embed = discord.Embed(title = "{0} Goodbye~~ come back soon!".format(ctx.message.author.name))
+        embed.set_image(url ="https://i.kinja-img.com/gawker-media/image/upload/s--MPWE1GzG--/c_scale,fl_progressive,q_80,w_800/xfyrealmcjruk6o3vqpu.gif ")
+        await ctx.send(f"{ctx.message.author.mention}, you are now leaving the quantum realm... ", embed = embed)
     await ctx.message.delete()
 	
 @client.command()
 async def thanosquotes(ctx):
-    member = ctx.message.author
-    embed = discord.Embed(title = "Thanos' Famous Quotes".format(ctx.message.author.name))
-    embed.set_image(url ="https://data.whicdn.com/images/326805782/original.gif ")
-    messages = ["The end is near...", "You’re strong. But I could snap my fingers, and you’d all cease to exist.", "Fun isn’t something one considers when balancing the universe. But this… does put a smile on my face.","Stark… you have my respect. I hope the people of Earth will remember you.","I know what it's like to lose. To feel so desperately that you're right, yet to fail nonetheless. It's frightening, turns the legs to jelly. I ask you to what end? Dread it. Run from it. Destiny arrives all the same. And now it's here. Or should I say, I am."]
-    message=random.choice(messages).format(member.mention)
-    await ctx.send(message, embed=embed)
+    global c 
+    print(c(ctx.channel.id))
+    if c(ctx.channel.id) == 1:
+        await ctx.send(f"Use this command in {client.get_channel(568398126671593496).mention}")
+    else:
+        member = ctx.message.author
+        embed = discord.Embed(title = "Thanos' Famous Quotes".format(ctx.message.author.name))
+        embed.set_image(url ="https://data.whicdn.com/images/326805782/original.gif ")
+        messages = ["The end is near...", "You’re strong. But I could snap my fingers, and you’d all cease to exist.", "Fun isn’t something one considers when balancing the universe. But this… does put a smile on my face.","Stark… you have my respect. I hope the people of Earth will remember you.","I know what it's like to lose. To feel so desperately that you're right, yet to fail nonetheless. It's frightening, turns the legs to jelly. I ask you to what end? Dread it. Run from it. Destiny arrives all the same. And now it's here. Or should I say, I am."]
+        message=random.choice(messages).format(member.mention)
+        await ctx.send(message, embed=embed)
     await ctx.message.delete()
 	
-client.run(os.environ['TOKEN'])
-
+#client.run(os.environ['TOKEN'])
+client.run("NjA2ODQ5MzQ0MTc1NDcyNjQ2.XURDAg.Dfkn6E55GmyHFn37FqlsjP8iDzs")

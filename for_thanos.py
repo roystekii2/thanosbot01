@@ -174,5 +174,9 @@ async def thanosquotes(ctx):
         message=random.choice(messages).format(member.mention)
         await ctx.send(message, embed=embed)
     await ctx.message.delete()
+
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Game(name='Upgrading Thanos Tech'))
 	
 client.run(os.environ['TOKEN'])

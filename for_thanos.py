@@ -33,8 +33,8 @@ async def on_message(message):
 @client.command
 @commands.has_any_role("Admin", "Mod", "Chat Mod")
 async def ban(ctx, member : discord.member, * , reason=None): 
- await member.ban(reason=reason)
- await ctx.send('{0} was snapped out of existence!'.format(user))
+    await member.ban(reason=reason)
+    await ctx.send('{0} was snapped out of existence!'.format(user))
     await ctx.message.delete()
 
 @client.command() 

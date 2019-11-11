@@ -12,6 +12,7 @@ from discord.utils import get
 logging.basicConfig(level='INFO')
 
 client = commands.Bot(command_prefix="=", case_insensitive=True)
+bot.remove_command('help')
 def C(ch:int):
     if ch == 586147813730025503 or ch == 605335008525156352 or ch == 587631308344262659 or ch == 592258548533166100:
         return 1 

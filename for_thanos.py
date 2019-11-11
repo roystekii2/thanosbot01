@@ -186,7 +186,7 @@ async def thanosquotes(ctx):
 
 @client.command()
 async def help(ctx):
-    embed = discord.Embed(title="Ebony Maw", description="Thanos' bot. List of commands are:", color=0xeee657)
+    embed = discord.Embed(title="Ebony Maw", description="Thanos' bot. Lists of commands are:", color=0xeee657)
 
     embed.add_field(name="=snap", value="Display a snap gif", inline=False)
     embed.add_field(name="=thanoschildren", value="Display current server members", inline=False)

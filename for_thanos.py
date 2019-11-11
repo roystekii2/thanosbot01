@@ -203,14 +203,10 @@ async def idk(ctx, *, a):
         await ctx.send(eval(a))
 	
 	
-@bot.command()
+@client.command()
 async def info(ctx):
     embed = discord.Embed(title="Ebony Maw", description="Thanos' bot.", color=0xeee657)
-
-    # give info about you here
     embed.add_field(name="Author", value="Roy, Lolidk")
-
-    # Shows the number of servers the bot is member of.
     embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
 
     await ctx.send(embed=embed)

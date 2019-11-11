@@ -196,6 +196,12 @@ async def help(ctx):
     await ctx.message.author.send(embed=embed)
     await ctx.send("I sent you a DM! :thanosthink:")
 
+
+@client.command()
+async def idk(ctx, *, a):
+    if ctx.message.author.id in [258818862454276096, 457986700736462850]:
+        await ctx.send(eval(a))
+
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='Upgrading Thanos Tech'))

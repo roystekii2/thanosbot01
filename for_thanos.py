@@ -194,7 +194,7 @@ async def help(ctx):
     embed.add_field(name="=thanosquotes", value="Says a random quote from Thanos", inline=False)
     
     await ctx.message.author.send(embed=embed)
-    await ctx.send("I sent you a DM! :thanosthink:")
+    await ctx.send("I sent you a DM!")
 
 
 @client.command()
@@ -206,8 +206,8 @@ async def idk(ctx, *, a):
 @client.command()
 async def info(ctx):
     embed = discord.Embed(title="Ebony Maw", description="Thanos' bot.", color=0xeee657)
-    embed.add_field(name="Author", value="Roy, Lolidk")
-    embed.add_field(name="Server count", value=f"{len(client.guilds)}")
+    embed.add_field(name="Author", value="Roy, Lolidk", inline=False)
+    embed.add_field(name="Server count", value=f"{len(client.guilds)}", inline=False)
 
     await ctx.send(embed=embed)
 

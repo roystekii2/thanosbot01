@@ -201,7 +201,7 @@ async def help(ctx):
     
     await ctx.message.author.send(embed=embed)
     await ctx.send("I sent you a DM!")
-    await ctx.message.delete()
+   
 
 
 	

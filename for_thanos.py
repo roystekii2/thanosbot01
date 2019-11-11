@@ -38,18 +38,6 @@ async def mute(ctx, user: discord.Member):
     await ctx.send('{0} has been muted!'.format(user))
     await ctx.message.delete()
 
-@client.command()
-@commands.has_any_role("Admin", "Mod")
-async def ban (ctx, member:discord.User=None, reason =None):
-    if member == None or member == ctx.message.author:
-        await ctx.channel.send("You cannot ban yourself")
-        return
-    if reason == None:
-        reason = "For being a jerk!"
-    message = f"You have been banned from {ctx.guild.name} for {reason}"
-    await member.send(message)
-     await ctx.guild.ban(member, reason=reason)
-    await ctx.channel.send('{0} was snapped out of existence!'.format(user))
  
 @client.command() 
 @commands.has_any_role("Admin", "Mod", "Chat Mod")

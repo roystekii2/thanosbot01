@@ -213,7 +213,7 @@ async def info(ctx):
     embed.add_field(name="Server count", value=f"{len(client.guilds)}", inline=False)
     embed.add_field(name="Bot creation date", value=f"Mon, Jul 8, 2019 9:22 AM (GMT+9)", inline=False)
     await ctx.send(embed=embed)
-    await ctx.message.delete()
+    
 
 @client.event
 async def on_ready():

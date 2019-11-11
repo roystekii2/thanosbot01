@@ -38,6 +38,12 @@ async def mute(ctx, user: discord.Member):
     await ctx.send('{0} has been muted!'.format(user))
     await ctx.message.delete()
 
+@client.command() 
+@commands.has_any_role("Admin", "Mod", "Chat Mod")
+async def purge(ctx, amount=1):
+    await ctx.channel.purge(limit=amount)
+    await ctx.send('Deleted {} messages!'.format(len(deleted))
+    await ctx.message.delete()
  
 @client.command() 
 @commands.has_any_role("Admin", "Mod", "Chat Mod")

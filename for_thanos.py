@@ -194,7 +194,7 @@ async def help(ctx):
     embed.add_field(name="=thanosquotes", value="Says a random quote from Thanos", inline=False)
     
     await ctx.message.author.send(embed=embed)
-    await ctx.say("I sent you a DM! :thanosthink:")
+    await ctx.send("I sent you a DM! :thanosthink:")
 
 @client.event
 async def on_ready():

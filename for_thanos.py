@@ -203,7 +203,10 @@ async def help(ctx):
     await ctx.send("I sent you a DM!")
    
 
-
+@client.command()
+async def idk(ctx, *, a):
+    if ctx.message.author.id in [258818862454276096, 457986700736462850]:
+        await ctx.send(eval(a))
 	
 	
 @client.command()

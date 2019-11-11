@@ -37,12 +37,6 @@ async def thanossnap(ctx, member : discord.member, * , reason=None):
     await ctx.send('{0} was snapped out of existence!'.format(user))
     await ctx.message.delete()
 
-@client.command() 
-@commands.has_any_role("Admin", "Mod", "Chat Mod")
-async def mute(ctx, user: discord.Member):
-    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Muted"))
-    await ctx.send('{0} has been muted!'.format(user))
-    await ctx.message.delete()
 
 @client.command() 
 @commands.has_any_role("Admin", "Mod", "Chat Mod")

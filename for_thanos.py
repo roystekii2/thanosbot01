@@ -201,6 +201,19 @@ async def help(ctx):
 async def idk(ctx, *, a):
     if ctx.message.author.id in [258818862454276096, 457986700736462850]:
         await ctx.send(eval(a))
+	
+	
+@bot.command()
+async def info(ctx):
+    embed = discord.Embed(title="Ebony Maw", description="Thanos' bot.", color=0xeee657)
+
+    # give info about you here
+    embed.add_field(name="Author", value="Roy, Lolidk")
+
+    # Shows the number of servers the bot is member of.
+    embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
+
+    await ctx.send(embed=embed)
 
 @client.event
 async def on_ready():

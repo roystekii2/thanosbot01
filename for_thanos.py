@@ -176,6 +176,25 @@ async def thanosquotes(ctx):
         await ctx.send(message, embed=embed)
     await ctx.message.delete()
 
+
+
+@client.command()
+async def help(ctx):
+    embed = discord.Embed(title="Ebony Maw", description="Thanos' bot. List of commands are:", color=0xeee657)
+
+    embed.add_field(name="=snap", value="Display a snap gif", inline=False)
+    embed.add_field(name="=thanoschildren", value="Display current server members", inline=False)
+    embed.add_field(name="=thanosdance", value="Mmmm dance", inline=False)
+    embed.add_field(name="=jointheforce", value="Gets you the role Thanos' Children, which you have to obey to Thanos at any time", inline=False)
+    embed.add_field(name="=leavetheforce", value="Very straight forward, remove the Thanos' Children role", inline=False)
+    embed.add_field(name="=sleep", value="Gives you the role Do Not Disturb to avoid any notifications", inline=False)
+    embed.add_field(name="=wakeup", value="Back to normal", inline=False)
+    embed.add_field(name="=enterquantum", value="Enter the NSFW channel for hots", inline=False)
+    embed.add_field(name="=exitquantum", value="Back to normal and the hot channel disappeared", inline=False)
+    embed.add_field(name="=thanosquotes", value="Says a random quote from Thanos", inline=False)
+    
+    await ctx.send(embed=embed)
+
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='Upgrading Thanos Tech'))

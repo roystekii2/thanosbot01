@@ -42,7 +42,7 @@ async def mute(ctx, user: discord.Member):
 @commands.has_any_role("Admin", "Mod", "Chat Mod")
 async def purge(ctx, amount=1):
     await ctx.channel.purge(limit=amount)
-    await ctx.channel.send(f'deleted {amount} messages')
+    await ctx.channel.send(f'Deleted {amount} messages')
     await ctx.message.delete()
  
 @client.command() 

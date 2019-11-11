@@ -193,7 +193,7 @@ async def help(ctx):
     embed.add_field(name="=exitquantum", value="Back to normal and the hot channel disappeared", inline=False)
     embed.add_field(name="=thanosquotes", value="Says a random quote from Thanos", inline=False)
     
-    await ctx.send(embed=embed)
+    await client.send_message(author, embed=embed)
 
 @client.event
 async def on_ready():

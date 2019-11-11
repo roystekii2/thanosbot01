@@ -31,7 +31,7 @@ async def on_message(message):
         await message.delete()
 
 @client.command()
-async def ban(ctx, member : discord.Member, *, reason=None): 
+async def thanossnap(ctx, member : discord.Member, *, reason=None): 
  await member.ban(reason=reason)
  await ctx.send('{0} was snapped out of existence!'.format(user))
     await ctx.message.delete()

@@ -201,7 +201,7 @@ async def thanosquotes(ctx):
 async def help(ctx):
     embed = discord.Embed(title="Ebony Maw", description="Thanos' bot. Lists of commands are:", color=0xeee657)
 
-    embed.set_author(icon_url='https://images-ext-2.discordapp.net/external/wDiq6JZ6C3HulU_515igFlL7rnfJcBiZQiEjaUPaAC8/%3Ftoken%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RiNmQ3MWVmLTc2NTctNGQxNy04ZjJmLTc4OTc3MTJlYmU1M1wvZGNhc2tveC1jYjQ1MWM0NC03ZDA3LTQxMWMtOTUzZS1iNDk5MjdlMzAyZTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zJG-8rcpysurBqNrJLmpyg06V7OFpD9Y5xFW45aDRTU/https/images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/db6d71ef-7657-4d17-8f2f-7897712ebe53/dcaskox-cb451c44-7d07-411c-953e-b49927e302e5.png?width=475&height=475')
+    embed.set_author(icon_url='https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/db6d71ef-7657-4d17-8f2f-7897712ebe53/dcaskox-cb451c44-7d07-411c-953e-b49927e302e5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RiNmQ3MWVmLTc2NTctNGQxNy04ZjJmLTc4OTc3MTJlYmU1M1wvZGNhc2tveC1jYjQ1MWM0NC03ZDA3LTQxMWMtOTUzZS1iNDk5MjdlMzAyZTUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zJG-8rcpysurBqNrJLmpyg06V7OFpD9Y5xFW45aDRTU')
     embed.add_field(name="=snap", value="Display a snap gif", inline=False)
     embed.add_field(name="=thanoschildren", value="Display current server members", inline=False)
     embed.add_field(name="=thanosdance", value="Mmmm dance", inline=False)

@@ -201,7 +201,6 @@ async def thanosquotes(ctx):
 async def help(ctx):
     embed = discord.Embed(title="Ebony Maw", description="Thanos' bot. Lists of commands are:", color=0xeee657)
 
-    embed.set_author(name=client.user.name, icon=discord.Embed.Empty, icon_url=client.user.avatar_url)
     embed.add_field(name="=snap", value="Display a snap gif", inline=False)
     embed.add_field(name="=thanoschildren", value="Display current server members", inline=False)
     embed.add_field(name="=thanosdance", value="Mmmm dance", inline=False)
@@ -226,6 +225,7 @@ async def idk(ctx, *, a):
 @client.command()
 async def info(ctx):
     embed = discord.Embed(title="Name", description="Ebony Maw", color=0xeee657)
+    embed.set_author(name=client.user.name, icon=discord.Embed.Empty, icon_url=client.user.avatar_url)
     embed.add_field(name="Creators", value="Roy&Lolidk", inline=False)
     embed.add_field(name="Server count", value=f"{len(client.guilds)}", inline=False)
     embed.add_field(name="Bot creation date", value=f"Mon, Jul 8, 2019 9:22 AM (GMT+9)", inline=False)

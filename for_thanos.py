@@ -201,7 +201,7 @@ async def thanosquotes(ctx):
 async def help(ctx):
     embed = discord.Embed(title="Ebony Maw", description="Thanos' bot. Lists of commands are:", color=0xeee657)
 
-    embed.set_author(name="Ebony Maw", icon_url="https://images-ext-1.discordapp.net/external/k_qUq5L9Kz6rChxOXiYPZhCDOo6hblet5Vkdt-spSiM/%3Fsize%3D128/https/cdn.discordapp.com/avatars/597779593893642240/b3728edd9068d2df1a2ad48c3f87e5bb.png")
+    embed.set_author(icon_url=bot.user.avatar_url)
     embed.add_field(name="=snap", value="Display a snap gif", inline=False)
     embed.add_field(name="=thanoschildren", value="Display current server members", inline=False)
     embed.add_field(name="=thanosdance", value="Mmmm dance", inline=False)

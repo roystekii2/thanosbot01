@@ -29,6 +29,8 @@ async def on_message(message):
         await message.delete()
     elif message.channel == general and message.attachments:
         await message.delete()
+        await ctx.send(“Image deleted, no images without Thanos’ permission")
+
 
 @client.command()
 @commands.has_any_role("Admin", "Mod", "Chat Mod")

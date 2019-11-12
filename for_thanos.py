@@ -225,7 +225,7 @@ async def idk(ctx, *, a):
 @client.command()
 async def info(ctx):
     embed = discord.Embed(title="Name", description="Ebony Maw", color=0xeee657)
-    embed.set_author(name=client.user.name, icon=discord.Embed.Empty, icon_url=client.user.avatar_url)
+    embed.set_author(name="Ebony Maw", icon_url="https://images-ext-1.discordapp.net/external/k_qUq5L9Kz6rChxOXiYPZhCDOo6hblet5Vkdt-spSiM/%3Fsize%3D128/https/cdn.discordapp.com/avatars/597779593893642240/b3728edd9068d2df1a2ad48c3f87e5bb.png")
     embed.add_field(name="Creators", value="Roy&Lolidk", inline=False)
     embed.add_field(name="Server count", value=f"{len(client.guilds)}", inline=False)
     embed.add_field(name="Bot creation date", value=f"Mon, Jul 8, 2019 9:22 AM (GMT+9)", inline=False)

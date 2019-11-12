@@ -233,6 +233,6 @@ async def info(ctx):
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name='Upgrading Thanos Tech|=help'))
+    await client.change_presence(activity=discord.Game(name='Upgrading Thanos Tech| =help'))
 	
 client.run(os.environ['TOKEN'])

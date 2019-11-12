@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -- coding: utf-8 --
 import logging
@@ -29,6 +30,7 @@ async def on_message(message):
         await message.delete()
     elif message.channel == general and message.attachments:
         await message.delete()
+        await ctx.channel.send(f'Image deleted, no images without Thanos’ permission')
         
 
 

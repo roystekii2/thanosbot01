@@ -43,12 +43,22 @@ async def purge(ctx, amount=1):
     await ctx.channel.purge(limit=amount)
     await ctx.channel.send(f'Deleted {amount} messages')
     await ctx.message.delete()
- 
+
 @client.command() 
 @commands.has_any_role("Admin", "Mod", "Chat Mod")
 async def unmute(ctx, user: discord.Member):
     await user.remove_roles(discord.utils.get(ctx.guild.roles, name = "Muted"))
-    await ctx.send('{0} has been  unmuted!'.format(user))
+    await ctx.send('{0} has been unmuted!'.format(user))
+    await ctx.message.delete()
+
+
+
+
+@client.command() 
+@commands.has_any_role("Admin", "Mod", "Chat Mod")
+async def mute(ctx, user: discord.Member):
+    await user.add_roles(discord.utils.get(ctx.guild.roles, name = "Muted"))
+    await ctx.send(‘successfully muted {0}'.format(user))
     await ctx.message.delete()
 
 

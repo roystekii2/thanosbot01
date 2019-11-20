@@ -31,7 +31,7 @@ async def on_message(message):
         await message.delete()
     elif message.channel == general and message.attachments and not message.author.guild_permissions.attach_files and not message.author.guild_permissions.administrator:
         await message.delete()
-        await message.channel.send(“No images without Thanos’ permission”)
+        await message.channel.send("No images without Thanos’ permission")
     
      
         

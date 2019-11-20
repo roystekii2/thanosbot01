@@ -22,15 +22,18 @@ def C(ch:int):
 global c 
 c = C
 # do NOT use @client.event here, it breaks everything
+
 @client.listen() 
 async def on_message(message):
     nsfw_channel = client.get_channel(593050161467621395) 
     general = client.get_channel(586147813730025503) 
     if message.channel == nsfw_channel and not message.attachments:
         await message.delete()
-    elif message.channel == general and message.attachments:
+    elif message.channel == general and message.attachments and not message.author.guild_permissions.attach_files and not message.author.guild_permissions.administrator:
         await message.delete()
-        await ctx.send('Image deleted, no images without Thanos’ permission')
+        await message.channel.send(“No images without Thanos’ permission”)
+    
+     
         
 
 

@@ -29,9 +29,9 @@ async def on_message(message):
     general = client.get_channel(586147813730025503) 
     if message.channel == nsfw_channel and not message.attachments:
         await message.delete()
-    elif message.channel == general and message.attachments:
+    elif message.channel == general and message.attachments and not message.author.guild_permissions.administrator:
         await message.delete()
-        await message.channel.send("No images without Thanos’ permission")
+        await message.channel.send(“No images without Thanos’ permission”)
     
      
         

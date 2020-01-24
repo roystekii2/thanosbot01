@@ -216,8 +216,9 @@ async def help(ctx):
     embed.add_field(name="=thanosquotes", value="Says a random quote from Thanos", inline=False)
     
     await ctx.message.author.send(embed=embed)
-    if ctx.guild:
-	await ctx.send("I sent you a DM!")
+    if ctx.guild: 
+        await ctx.send("I sent you a DM!")
+ 
 	
    
 

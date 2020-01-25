@@ -249,7 +249,6 @@ async def on_message(msg):
 
 
 
-
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game(name='Upgrading Thanos Tech| =help'))

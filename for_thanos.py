@@ -237,6 +237,18 @@ async def info(ctx):
     embed.add_field(name="Bot creation date", value=f"Mon, Jul 8, 2019 9:22 AM (GMT+9)", inline=False)
     await ctx.send(embed=embed)
     
+@client.event
+async def on_message(msg):
+    if int(msg.author.id) == 554650679868915712:
+        if "<@258818862454276096>" in msg.content:
+            await msg.delete()
+    await client.process_commands(msg)
+    await msg.channel.send("HA GOTEM")
+
+
+
+
+
 
 @client.event
 async def on_ready():
